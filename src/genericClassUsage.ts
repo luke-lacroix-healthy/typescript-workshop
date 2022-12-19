@@ -26,9 +26,10 @@ export async function genericClassUsage() {
   const ex2 = new GenericClass<string, number>();
   const val2a = ex2.get('a');
 
-  const ex3 = new GenericClass<'a', number>();
+  const ex3 = new GenericClass<'a' | 'c', number>();
   const val3a = ex3.get('a');
   const val3b = ex3.get('b');
+  const val3c = ex3.get('c');
 
-  return [val1a, val2a, val3a, val3b];
+  return [val1a, val2a, val3a, val3b, val3c];
 }
